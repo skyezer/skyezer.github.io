@@ -1300,8 +1300,8 @@ input:checked + .toggle-bg {
   margin-top: 1rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .box-border {
@@ -2791,14 +2791,6 @@ input:checked + .toggle-bg {
   padding-top: 0.5rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
-}
-
-.pt-10 {
-  padding-top: 2.5rem;
-}
-
 .text-left {
   text-align: left;
 }
@@ -2863,6 +2855,10 @@ input:checked + .toggle-bg {
   font-family: Stem-Regular, sans-serif;
 }
 
+.font-stem_light {
+  font-family: Stem-Light, sans-serif;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -2881,6 +2877,16 @@ input:checked + .toggle-bg {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -2994,6 +3000,11 @@ input:checked + .toggle-bg {
   color: rgb(249 212 4 / var(--tw-text-opacity));
 }
 
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(63 131 248 / var(--tw-text-opacity));
@@ -3027,11 +3038,6 @@ input:checked + .toggle-bg {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .underline {
