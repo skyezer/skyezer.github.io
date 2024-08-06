@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+    @font-face {
+      font-family: "Avenir";
+      font-weight: bold;
+      src: url('./fonts/AvenirLTStd-Black.otf') format('opentype');
+    }
+  
+    @font-face {
+      font-family: "Feeling Passionate";
+      font-weight: normal;
+      src: url('./fonts/Feeling-Passionate.otf') format('opentype');
+    }
+  
+    @font-face {
+      font-family: "Stem-Regular";
+      font-weight: normal;
+      src: url('./fonts/Stem-Regular.otf') format('opentype');
+    }
+  
+    @font-face {
+      font-family: "Stem-Light";
+      font-weight: lighter;
+      src: url('./fonts/Stem-Light.otf') format('opentype');
+    }
+  
+    @font-face {
+      font-family: "Stem-Bold";
+      font-weight: bold;
+      src: url('./fonts/Stem-Bold.otf') format('opentype');
+    }
+  
+  }

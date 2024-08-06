@@ -4,45 +4,130 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./src/output.css" rel="stylesheet">
+  <style>
+    .full-screen-bg {
+      /* Ensure the image covers the entire container */
+      object-fit: cover;
+      /* Center the image within the container */
+      object-position: center;
+      /* Ensure the image takes the full height and width of the viewport */
+      height: 100vh;
+      width: 100vw;
+    }
+    .gradient-text {
+      color: white;
+      background: linear-gradient(90deg, #3498db, #9b59b6, #e74c3c, #f1c40f);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: gradientMove 5s linear infinite alternate;
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 100% 0%;
+      }
+    }
+
+  </style>
+  
 </head>
 <body>
-  
 
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-    </a>
-    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-    </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-        <li>
-          <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-        </li>
-      </ul>
+
+    <nav class="bg-transparent fixed top-0 z-50 flex justify-center items-center w-full  transition duration-500 px-8 lg:px-20 py-10">
+        <div id="nav-div" class="container flex flex-wrap items-center justify-between mx-auto">
+            <a href="#" class="flex items-center animate-fadeIn">
+                <div class="font-avenir text-2xl md:text-3xl lg:text-4xl text-white transition group flex" id="KM_div">
+                    <span class="transition">K</span>
+                    <span class="transition w-0 opacity-0 group-hover:w-full group-hover:opacity-100 group-hover:animate-width_animation ease-in duration-500" id="K_div">aiser</span>
+                    <span class="text-[#f8d50b] transition inline-flex">M 
+                        <span class="text-[#f8d50b] transition w-0 opacity-0 group-hover:w-full group-hover:opacity-100 group-hover:animate-width_animation ease-in duration-500" id="M_div">etran</span>
+                    </span> 
+                </div>
+                
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:text-[#001a4a] focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-12 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent ">
+                    <li>
+                        <a href="#home" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300">About Me</a>
+                    </li>
+                    <li>
+                        <a href="#services" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300">Testimonials</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Full-Screen Image Container -->
+<div class="relative overflow-hidden w-full h-full">
+    <img src="./src/black.jpg" alt="Full Screen Background" class="full-screen-bg grayscale">
+    <!-- <img src="./src/grad1.jpg" alt="Full Screen Background" class="sm:block hidden full-screen-bg grayscale">
+    <img src="./src/grad.jpg" alt="Full Screen Background" class="block sm:hidden full-screen-bg grayscale"> -->
+    <div class="absolute inset-0 flex items-center justify-start text-white animate-fadeIn">
+      <div class="px-8 lg:px-20 rounded">
+        <h1 class="text-3xl font-avenir leading-none md:text-6xl lg:text-8xl mb-4"><span class="text-[#f9d404]">Crafting Digital<br>
+            Masterpieces</span> as<br>
+            a Web Artisan</h1>
+        <h2 class="text-2xl mb-4 font font-medium">Hi, I'm <span class="font-avenir ">Kaiser</span>, I turning ideas into <span class="gradient-text">interactive web experiences.</span></h2>
+        <!-- <p class="mb-6">Passionate about creating beautiful, functional web experiences.</p> -->
+        <a href="#portfolio" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">View My Work</a>
+      </div>
     </div>
   </div>
-</nav>
+
+<!-- <section class="h-screen">
+    <div class="h-full w-full flex items-center justify-center">
+        <div class="flex items-center justify-center z-30">
+            Every Screen is a Canvas!
+        </div>
+        <img class="absolute md:block z-10 h-full w-full object-scale-down grayscale" src="./src/kai2.jpg" alt="">
+    </div>
+</section> -->
+
+
+<footer class="py-4 bg-[#F9D304] text-black text-center font-stem_regular">
+    <p>&copy; 2024 Kaiser Metran. All rights reserved.</p>
+    <div class="mt-2">
+      <a href="#" class="mx-2 text-black font-stem_regular hover:text-gray-400">LinkedIn</a>
+      <a href="#" class="mx-2 text-black font-stem_regular hover:text-gray-400">GitHub</a>
+      <a href="#" class="mx-2 text-black font-stem_regular hover:text-gray-400">Twitter</a>
+    </div>
+  </footer>
+
+
 
 <script src="src/flowbite/dist/flowbite.min.js"></script>
+<script>
+    const KM_div = document.getElementById('KM_div');
+    const K_div = document.getElementById('K_div');
+    const M_div = document.getElementById('M_div');
+
+    KM_div.addEventListener('mouseover', () => {
+        K_div.classList.remove('invisible')
+        M_div.classList.remove('invisible')
+    });
+
+    KM_div.addEventListener('mouseout', () => {
+        K_div.classList.add('invisible')
+        M_div.classList.add('invisible')
+    });
+</script>
 
 </body>
 </html>
