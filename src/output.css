@@ -2557,6 +2557,11 @@ input:checked + .toggle-bg {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-blue-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(26 86 219 / var(--tw-bg-opacity));
@@ -2582,11 +2587,6 @@ input:checked + .toggle-bg {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
-.bg-gray-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
-
 .bg-gray-900\/50 {
   background-color: rgb(17 24 39 / 0.5);
 }
@@ -2604,9 +2604,9 @@ input:checked + .toggle-bg {
   background-color: rgb(255 255 255 / 0.5);
 }
 
-.bg-black {
+.bg-gray-900 {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-50 {
@@ -3046,9 +3046,9 @@ input:checked + .toggle-bg {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-yellow-500 {
+.text-\[\#F9D304\] {
   --tw-text-opacity: 1;
-  color: rgb(194 120 3 / var(--tw-text-opacity));
+  color: rgb(249 211 4 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -3817,6 +3817,11 @@ input:checked + .toggle-bg {
 
   .md\:font-medium {
     font-weight: 500;
+  }
+
+  .md\:text-\[\#F9D304\] {
+    --tw-text-opacity: 1;
+    color: rgb(249 211 4 / var(--tw-text-opacity));
   }
 
   .md\:text-white {

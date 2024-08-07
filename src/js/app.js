@@ -15,6 +15,21 @@ const KM_div = document.getElementById('KM_div');
     document.addEventListener("DOMContentLoaded", (event) => {
       gsap.registerPlugin(Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin,EaselPlugin,PixiPlugin,TextPlugin,RoughEase,ExpoScaleEase,SlowMo,CustomEase)
     
+      let lastScrollY = window.scrollY;
+      const navbar = document.getElementById("navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > lastScrollY) {
+          // Scrolling down
+          navbar.classList.remove("visible-nav");
+          navbar.classList.add("hidden-nav");
+        } else {
+          // Scrolling up
+          navbar.classList.remove("hidden-nav");
+          navbar.classList.add("visible-nav");
+        }
+        lastScrollY = window.scrollY;
+      });
     });
 
 
@@ -55,23 +70,22 @@ const KM_div = document.getElementById('KM_div');
     });
 
     ScrollTrigger.create({
-        trigger: "#scroll",
+        
         start: "top top",
         end: "bottom top",
-        markers: true,
         onToggle: self => {
             const navbar = document.querySelector('nav');
             if (self.isActive) {
             navbar.classList.add('md:h-20');
             navbar.classList.add('backdrop-blur-sm');
-            navbar.classList.add('bg-black');
+            navbar.classList.add('bg-gray-900');
             navbar.classList.add('bg-opacity-50');
             navbar.classList.add('rounded-b-lg');
             }
             else{
             navbar.classList.remove('md:h-20');
             navbar.classList.remove('backdrop-blur-sm');
-            navbar.classList.remove('bg--black');
+            navbar.classList.remove('bg--gray-900');
             navbar.classList.remove('bg-opacity-50');
             navbar.classList.remove('rounded-b-lg');
             }
@@ -81,26 +95,36 @@ const KM_div = document.getElementById('KM_div');
 
 const sections = document.querySelectorAll("section");
 
-  // sections.forEach((section, index) => {
-  //   ScrollTrigger.create({
-  //     trigger: section,
-  //     start: "top top",
-  //     end: "bottom center",
-  //     markers: true,
-  //     onEnter: () => highlightLink(index),
-  //     onLeaveBack: () => highlightLink(index - 1)
-  //   });
-  // });
+  sections.forEach((section, index) => {
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top 100px",
+      end: "bottom 100px",
+      onEnter: () => highlightLink(index),
+      onLeaveBack: () => highlightLink(index - 1)
+    });
+  });
 
   function highlightLink(index) {
     navLinks.forEach((link, i) => {
       if (i === index) {
-        link.classList.add("text-yellow-500");
-        link.classList.remove("text-white");
+        link.classList.add("md:text-[#F9D304]");
+        link.classList.add("text-[#F9D304]");
+        link.classList.remove("md:text-white");
+        link.classList.remove("text-[#001a4a]");
       } else {
-        link.classList.remove("text-yellow-500");
-        link.classList.add("text-white");
+        link.classList.remove("md:text-[#F9D304]");
+        link.classList.remove("text-[#F9D304]");
+        link.classList.add("md:text-white");
+        link.classList.add("text-[#001a4a]");
       }
     });
   }
+
+  const mobileButton = document.getElementById('mobileButton')
+
+  function hideMobileButton(){
+    mobileButton.click();
+  }
+
     

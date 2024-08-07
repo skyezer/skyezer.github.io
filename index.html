@@ -41,6 +41,16 @@
       animation: gradientMove 5s linear infinite alternate;
     }
 
+    .hidden-nav {
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .visible-nav {
+      transform: translateY(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
     @keyframes gradientMove {
       0% {
         background-position: 0% 0%;
@@ -54,7 +64,7 @@
   
 </head>
 <body>
-    <nav class="bg-transparent fixed top-0 z-50 flex justify-center items-center w-full  transition duration-500 px-8 lg:px-20 py-10">
+    <nav id="navbar" class="bg-transparent fixed top-0 z-50 flex justify-center items-center w-full transition duration-500 px-8 lg:px-20 py-10 visible-nav">
         <div id="nav-div" class="container flex flex-wrap items-center justify-between mx-auto">
             <a href="#" class="flex items-center animate-fadeIn">
                 <div class="font-avenir text-2xl md:text-3xl lg:text-4xl text-white transition group flex" id="KM_div">
@@ -66,23 +76,23 @@
                 </div>
                 
             </a>
-            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:text-[#001a4a] focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
+            <button id="mobileButton" data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:text-[#001a4a] focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
             </button>
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                 <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-12 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent ">
                     <li>
-                        <a href="#home" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300">Home</a>
+                        <a href="#home" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300" onclick="hideMobileButton()">Home</a>
                     </li>
                     <li>
-                        <a href="#about" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300">About Me</a>
+                        <a href="#about" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300" onclick="hideMobileButton()">About Me</a>
                     </li>
                     <li>
-                        <a href="#services" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300">Portfolio</a>
+                        <a href="#services" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300" onclick="hideMobileButton()">Portfolio</a>
                     </li>
                     <li>
-                        <a href="#contact" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300">Testimonials</a>
+                        <a href="#contact" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300" onclick="hideMobileButton()">Testimonials</a>
                     </li>
                 </ul>
             </div>
@@ -91,7 +101,7 @@
 
 <!-- Full-Screen Image Container -->
 <section id="home" class="relative overflow-hidden w-full h-full">
-    <img src="./src/black.jpg" alt="Full Screen Background" class="full-screen-bg grayscale">
+    <img src="./src/img/black.jpg" alt="Full Screen Background" class="full-screen-bg grayscale">
     <!-- <img src="./src/grad1.jpg" alt="Full Screen Background" class="sm:block hidden full-screen-bg grayscale">
     <img src="./src/grad.jpg" alt="Full Screen Background" class="block sm:hidden full-screen-bg grayscale"> -->
     <div class="absolute inset-0 flex items-center justify-start text-white animate-fadeIn ">
