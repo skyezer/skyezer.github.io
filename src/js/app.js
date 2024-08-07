@@ -78,14 +78,14 @@ const KM_div = document.getElementById('KM_div');
             if (self.isActive) {
             navbar.classList.add('md:h-20');
             navbar.classList.add('backdrop-blur-sm');
-            navbar.classList.add('bg-gray-900');
+            navbar.classList.add('bg-black');
             navbar.classList.add('bg-opacity-50');
             navbar.classList.add('rounded-b-lg');
             }
             else{
             navbar.classList.remove('md:h-20');
             navbar.classList.remove('backdrop-blur-sm');
-            navbar.classList.remove('bg-gray-900');
+            navbar.classList.remove('bg-black');
             navbar.classList.remove('bg-opacity-50');
             navbar.classList.remove('rounded-b-lg');
             }
