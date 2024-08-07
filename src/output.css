@@ -2542,14 +2542,14 @@ input:checked + .toggle-bg {
   background-color: rgb(249 211 4 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#f9d404\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 212 4 / var(--tw-bg-opacity));
+}
+
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(63 131 248 / var(--tw-bg-opacity));
 }
 
 .bg-blue-700 {
@@ -2851,6 +2851,10 @@ input:checked + .toggle-bg {
   font-family: Stem-Regular, sans-serif;
 }
 
+.font-passionate {
+  font-family: Feeling Passionate, sans-serif;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -2861,6 +2865,11 @@ input:checked + .toggle-bg {
   line-height: 2.5rem;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -2869,11 +2878,6 @@ input:checked + .toggle-bg {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .font-bold {
@@ -3472,11 +3476,6 @@ input:checked + .toggle-bg {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
-.hover\:bg-blue-700:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(26 86 219 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-blue-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(30 66 159 / var(--tw-bg-opacity));
@@ -3490,6 +3489,36 @@ input:checked + .toggle-bg {
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-blue-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 86 219 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#f9d404\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 212 4 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#f9d404\]\/50:hover {
+  background-color: rgb(249 212 4 / 0.5);
+}
+
+.hover\:bg-\[\#f9d404\]\/80:hover {
+  background-color: rgb(249 212 4 / 0.8);
+}
+
+.hover\:bg-\[\#f9d404\]\/90:hover {
+  background-color: rgb(249 212 4 / 0.9);
+}
+
+.hover\:bg-\[\#f9d404d8\]:hover {
+  background-color: #f9d404d8;
+}
+
+.hover\:bg-\[\#f9d404e0\]:hover {
+  background-color: #f9d404e0;
 }
 
 .hover\:font-bold:hover {
@@ -3751,6 +3780,11 @@ input:checked + .toggle-bg {
     background-color: transparent;
   }
 
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -3769,16 +3803,6 @@ input:checked + .toggle-bg {
   .md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
-  }
-
-  .md\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 
   .md\:font-medium {
