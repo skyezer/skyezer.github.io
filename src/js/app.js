@@ -85,7 +85,7 @@ const KM_div = document.getElementById('KM_div');
             else{
             navbar.classList.remove('md:h-20');
             navbar.classList.remove('backdrop-blur-sm');
-            navbar.classList.remove('bg--gray-900');
+            navbar.classList.remove('bg-gray-900');
             navbar.classList.remove('bg-opacity-50');
             navbar.classList.remove('rounded-b-lg');
             }
