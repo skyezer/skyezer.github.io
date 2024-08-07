@@ -4,6 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./src/output.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Observer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EaselPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/PixiPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+  
+  
+  <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->    
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EasePack.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
   <style>
     .full-screen-bg {
       /* Ensure the image covers the entire container */
@@ -37,8 +54,6 @@
   
 </head>
 <body>
-
-
     <nav class="bg-transparent fixed top-0 z-50 flex justify-center items-center w-full  transition duration-500 px-8 lg:px-20 py-10">
         <div id="nav-div" class="container flex flex-wrap items-center justify-between mx-auto">
             <a href="#" class="flex items-center animate-fadeIn">
@@ -75,21 +90,24 @@
     </nav>
 
 <!-- Full-Screen Image Container -->
-<div class="relative overflow-hidden w-full h-full">
+<section id="home" class="relative overflow-hidden w-full h-full">
     <img src="./src/black.jpg" alt="Full Screen Background" class="full-screen-bg grayscale">
     <!-- <img src="./src/grad1.jpg" alt="Full Screen Background" class="sm:block hidden full-screen-bg grayscale">
     <img src="./src/grad.jpg" alt="Full Screen Background" class="block sm:hidden full-screen-bg grayscale"> -->
-    <div class="absolute inset-0 flex items-center justify-start text-white animate-fadeIn">
+    <div class="absolute inset-0 flex items-center justify-start text-white animate-fadeIn ">
       <div class="px-8 lg:px-20 rounded">
         <h1 class="text-4xl font-avenir leading-none md:text-7xl lg:text-8xl mb-4"><span class="text-[#f9d404]">Crafting Digital
             <br>Masterpieces</span> as
             <br>a Web Artisan</h1>
         <h2 class="text-base md:text-2xl font font-medium">Hi, I'm <span class="font-avenir text-[#f9d404]">Kaiser</span>, I turn ideas into <span class="gradient-text">interactive web experiences.</span></h2>
         <p class="mb-6 text-sm md:text-base">Passionate about creating beautiful, functional websites.</p>
-        <a href="#portfolio" class="bg-[#f9d404] text-black font-stem_regular py-2 px-4 rounded hover:bg-[#f9d404e0] transition duration-300">View My Work</a>
+        <a href="#portfolio" class="bg-[#f9d404] text-black font-stem_regular py-2 px-4 rounded hover:bg-[#f9d404e0] transition duration-300 hover:scale-110">View My Work</a>
       </div>
     </div>
-  </div>
+</section>
+<section id="about" class="relative overflow-hidden w-full h-screen">
+    hello
+</section>
 
 <!-- <section class="h-screen">
     <div class="h-full w-full flex items-center justify-center">
@@ -113,21 +131,7 @@
 
 
 <script src="src/flowbite/dist/flowbite.min.js"></script>
-<script>
-    const KM_div = document.getElementById('KM_div');
-    const K_div = document.getElementById('K_div');
-    const M_div = document.getElementById('M_div');
-
-    KM_div.addEventListener('mouseover', () => {
-        K_div.classList.remove('invisible')
-        M_div.classList.remove('invisible')
-    });
-
-    KM_div.addEventListener('mouseout', () => {
-        K_div.classList.add('invisible')
-        M_div.classList.add('invisible')
-    });
-</script>
+<script src="src/js/app.js"></script>
 
 </body>
 </html>

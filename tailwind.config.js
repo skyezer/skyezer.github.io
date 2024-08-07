@@ -8,7 +8,7 @@ module.exports = {
       animation: {
         width_animation: "width_animation ease-in",
         fadeIn: "fadeIn 1s",
-
+        sway: "sway 2s infinite",
       }, 
       keyframes: {
         width_animation: {
@@ -36,7 +36,20 @@ module.exports = {
             transform: "translate(0, 0)",
           },
         },
-
+        sway: {
+          "0%": {
+            transform: "translate(0px, 0px)",
+          },
+          "50%": {
+            transform: "translate(8px, 0px)",
+          },
+          // "66%": {
+          //   transform: "translate(15px, 0px)",
+          // },
+          "100%": {
+            transform: "tranlate(0px, 0px)",
+          },
+        },
       },
       fontFamily: {
         avenir: ['Avenir', 'sans-serif'],
