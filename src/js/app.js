@@ -70,7 +70,6 @@ const KM_div = document.getElementById('KM_div');
     });
 
     ScrollTrigger.create({
-        
         start: "top top",
         end: "bottom top",
         onToggle: self => {
@@ -120,6 +119,49 @@ const sections = document.querySelectorAll("section");
       }
     });
   }
+
+  gsap.to(".absolute.inset-0", {
+    yPercent: -50,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".parallax",
+      start: "top top",
+      end: "bottom top",
+      scrub: true
+    }
+  });
+
+  const timeline = document.querySelector(".timeline");
+const events = document.querySelectorAll(".event");
+
+// Calculate the width of the entire timeline
+const timelineWidth = timeline.scrollWidth;
+const timelineContainerWidth = timeline.parentElement.clientWidth;
+
+// Create the horizontal scroll animation
+gsap.to(timeline, {
+  x: -(timelineWidth - timelineContainerWidth),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".section",
+    start: "top top",
+    end: () => "+=" + (timelineWidth - timelineContainerWidth),
+    scrub: true,
+    pin: true,
+    anticipatePin: 1,
+    // onLeave: () => {
+    //   gsap.to(".section", {
+    //     autoAlpha: 0,
+    //     duration: 0.5,
+    //     onComplete: () => {
+    //       gsap.to(".section", { autoAlpha: 1 });
+    //     }
+    //   });
+    // }
+  }
+});
+
+  
 
   const mobileButton = document.getElementById('mobileButton')
 

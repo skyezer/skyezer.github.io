@@ -51,6 +51,39 @@
       transition: transform 0.3s ease-in-out;
     }
 
+    /* .section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.timeline {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.event {
+  min-width: 100vw;
+  height: 200px;
+  background: lightcoral;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-right: 20px;
+} */
+    
+
     @keyframes gradientMove {
       0% {
         background-position: 0% 0%;
@@ -63,7 +96,7 @@
   </style>
   
 </head>
-<body>
+<body class="scroll">
     <nav id="navbar" class="fixed top-0 z-50 flex justify-center items-center w-full transition duration-500 px-8 lg:px-20 py-10 visible-nav">
         <div id="nav-div" class="container flex flex-wrap items-center justify-between mx-auto">
             <a href="#" class="flex items-center animate-fadeIn">
@@ -101,33 +134,109 @@
 
 <!-- Full-Screen Image Container -->
 <section id="home" class="relative overflow-hidden w-full h-full">
-    <img src="./src/img/black.jpg" alt="Full Screen Background" class="full-screen-bg grayscale">
-    <!-- <img src="./src/grad1.jpg" alt="Full Screen Background" class="sm:block hidden full-screen-bg grayscale">
-    <img src="./src/grad.jpg" alt="Full Screen Background" class="block sm:hidden full-screen-bg grayscale"> -->
-    <div class="absolute inset-0 flex items-center justify-start text-white animate-fadeIn ">
-      <div class="px-8 lg:px-20 rounded">
+    <img src="./src/img/black.jpg" alt="Full Screen Background" class="full-screen-bg grayscale parallax">
+
+    <div class="absolute inset-0 flex items-center justify-start text-white ">
+      <div class="px-8 lg:px-20 rounded animate-fadeIn">
         <h1 class="text-4xl font-avenir leading-none md:text-7xl lg:text-8xl mb-4"><span class="text-[#f9d404]">Crafting Digital
             <br>Masterpieces</span> as
             <br>a Web Artisan</h1>
-        <h2 class="text-base md:text-2xl font font-medium">Hi, I'm <span class="font-avenir text-[#f9d404]">Kaiser</span>, I turn ideas into <span class="gradient-text">interactive web experiences.</span></h2>
-        <p class="mb-6 text-sm md:text-base">Passionate about creating beautiful, functional websites.</p>
+        <h2 class="text-base md:text-2xl font font-medium mb-6">Hi, I'm <span class="font-avenir text-[#f9d404]">Kaiser</span>, I turn ideas into <span class="gradient-text">interactive web experiences.</span></h2>
+        <!-- <p class="mb-6 text-sm md:text-base">Passionate about creating beautiful, functional websites.</p> -->
         <a href="#portfolio" class="bg-[#f9d404] text-black font-stem_regular py-2 px-4 rounded hover:bg-[#f9d404e0] transition duration-300 hover:scale-110">View My Work</a>
       </div>
     </div>
-</section>
-<section id="about" class="relative overflow-hidden w-full h-screen">
-    hello
+
 </section>
 
-<!-- <section class="h-screen">
-    <div class="h-full w-full flex items-center justify-center">
-        <div class="flex items-center justify-center z-30">
-            Every Screen is a Canvas!
+<!-- About -->
+<div id="about" class="section h-screen flex items-start justify-center bg-[#343434]">
+  <div class="timeline-container relative w-full h-full overflow-hidden">
+    <div class="timeline flex absolute top-1 translate-y-1/2">
+
+      <div class="event w-screen h-full bg-[#343434] flex items-start justify-center mr-20">
+        <div>
+          <div class="js-show-on-scroll text-center">
+            <div class="flex items-center justify-center">
+              <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 78"><path fill="#FFFCE1" d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"></path></svg>
+              <h2 class="text-base text-white font-avenir tracking-wide">ABOUT ME</h2>
+              <svg class="w-6 h-6 rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 78"><path fill="#FFFCE1" d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"></path></svg>
+            </div>
+            <p class="mt-1 text-4xl font-stem_bold sm:text-5xl sm:tracking-tight lg:text-6xl text-white ">Kaiser, <span class ="mt-1 text-4xl font-extrabold text-[#F9D304] sm:text-5xl sm:tracking-tight lg:text-6xl ">Who?</span></p>
+            <p class="max-w-3xl mt-4 mx-auto font-stem_regular text-xl text-gray-200">Here is my timeline so far...</p>
+            <div class="pt-16">
+              <ol class="items-center flex w-screen text-start">
+                <li class="relative mb-6 pl-6 ">
+                    <div class="flex items-center">
+                        <div class="z-10 flex items-center justify-center w-6 h-6 bg-[#f9d404] rounded-full ring-0 ring-[#f9d404]/50 sm:ring-8 shrink-0">
+                            <svg class="w-2.5 h-2.5 text-[#001a4a]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                            </svg>
+                        </div>
+                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                    </div>
+                    <div class="mt-3 sm:pe-8">
+                        <h3 class="text-lg font-semibold text-[#f9d404]">Hello World!</h3>
+                        <p class="block mb-2 text-sm font-normal leading-none text-gray-400">Born on <span class="font-avenir">July 7, 1999 </span></p>
+                        <p class="text-base font-normal text-gray-500 dark:text-gray-400">After several iterations, a final version of Kaiser was shipped to production in the Earth Environment. 🌏</p>
+                    </div>
+                </li>
+                <li class="relative mb-6 pl-6 ">
+                    <div class="flex items-center">
+                        <div class="z-10 flex items-center justify-center w-6 h-6 bg-[#f9d404] rounded-full ring-0 ring-[#f9d404]/50 sm:ring-8 shrink-0">
+                            <svg class="w-2.5 h-2.5 text-[#001a4a]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                            </svg>
+                        </div>
+                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                    </div>
+                    <div class="mt-3 sm:pe-8">
+                        <h3 class="text-lg font-semibold text-[#f9d404]">Elementary, My Dear Watson!</h3>
+                        <p class="block mb-2 text-sm font-normal leading-none text-gray-400">Graduated Elementary on <span class="font-avenir">July 7, 1999 </span></p>
+                        <p class="text-base font-normal text-gray-500 dark:text-gray-400">After several iterations, a final version of Kaiser was shipped to production in the Earth Environment. 🌏</p>
+                    </div>
+                </li>
+                
+              </ol>
+            </div>
+          </div>
         </div>
-        <img class="absolute md:block z-10 h-full w-full object-scale-down grayscale" src="./src/kai2.jpg" alt="">
+      </div>
+      
+      <div class="event w-screen h-full bg-lime-500 flex items-center justify-center mr-20">Event 2</div>
+      <div class="event w-screen h-full bg-lime-500 flex items-center justify-center mr-20">Event 3</div>
+      <div class="event w-screen h-full bg-lime-500 flex items-center justify-center mr-20">Event 4</div>
+    </div>
+  </div>
+</div>
+<!-- <section id="about" class="relative overflow-hidden w-full h-screen bg-[#343434] text-white">
+    <div class="px-20">
+      <div class="flex items-start justify-center w-full h-full pt-10 px-20 parallax">
+        <div>
+          <div class="js-show-on-scroll text-center">
+            <div class="flex items-center justify-center">
+              <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 78"><path fill="#FFFCE1" d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"></path></svg>
+              <h2 class="text-base text-white font-avenir tracking-wide">ABOUT ME</h2>
+              <svg class="w-6 h-6 rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 78"><path fill="#FFFCE1" d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"></path></svg>
+            </div>
+            <p class="mt-1 text-4xl font-stem_bold sm:text-5xl sm:tracking-tight lg:text-6xl text-white ">Who <span class ="mt-1 text-4xl font-extrabold text-[#F9D304] sm:text-5xl sm:tracking-tight lg:text-6xl ">am I?</span></p>
+            <p class="max-w-3xl mt-4 mx-auto font-stem_regular text-xl text-gray-200">Here is my timeline so far.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-10 w-full h-full rounded-lg border">
+      <div class="flex items-center justify-center">
+        <div class="timeline-container relative">
+          <div class="timeline">
+            <div class="event">Event 1</div>
+            <div class="event">Event 2</div>
+            <div class="event">Event 3</div>
+            <div class="event">Event 4</div>
+          </div>
+        </div>
     </div>
 </section> -->
-
 
 <footer class="py-4 bg-[#F9D304] text-black text-center font-stem_regular">
     <p>&copy; 2024 Kaiser Metran. All rights reserved.</p>

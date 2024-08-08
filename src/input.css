@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+/* width */
+/* ::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+} */
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+  background: transparent;
+} */
+
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+  background: #F9D304;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+} */
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+
+  width: 5px; 
+  height: 5px; 
+  border-radius: 5px; 
+} */
+
+
+
 @layer base{
     @font-face {
       font-family: "Avenir";
