@@ -50,40 +50,7 @@
       transform: translateY(0);
       transition: transform 0.3s ease-in-out;
     }
-
-    /* .section {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.timeline-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.timeline {
-  display: flex;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.event {
-  min-width: 100vw;
-  height: 200px;
-  background: lightcoral;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  margin-right: 20px;
-} */
     
-
     @keyframes gradientMove {
       0% {
         background-position: 0% 0%;
@@ -96,8 +63,8 @@
   </style>
   
 </head>
-<body class="scroll">
-    <nav id="navbar" class="fixed top-0 z-50 flex justify-center items-center w-full transition duration-500 px-8 lg:px-20 py-10 visible-nav">
+<body class="snap-both snap-mandatory">
+  <nav id="navbar" class="fixed top-0 z-50 flex justify-center items-center w-full transition duration-500 px-8 lg:px-20 py-10 visible-nav">
         <div id="nav-div" class="container flex flex-wrap items-center justify-between mx-auto">
             <a href="#" class="flex items-center animate-fadeIn">
                 <div class="font-avenir text-2xl md:text-3xl lg:text-4xl text-white transition group flex" id="KM_div">
@@ -122,18 +89,18 @@
                         <a href="#about" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300" onclick="hideMobileButton()">About Me</a>
                     </li>
                     <li>
-                        <a href="#services" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300" onclick="hideMobileButton()">Portfolio</a>
+                        <a href="#portfolio" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300" onclick="hideMobileButton()">Portfolio</a>
                     </li>
                     <li>
-                        <a href="#contact" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300" onclick="hideMobileButton()">Testimonials</a>
+                        <a href="#testimonials" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300" onclick="hideMobileButton()">Testimonials</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
+  </nav>
 
-<!-- Full-Screen Image Container -->
-<section id="home" class="relative overflow-hidden w-full h-full">
+  <!-- Full-Screen Image Container -->
+  <section id="home" class="relative snap-start overflow-hidden w-full h-full">
     <img src="./src/img/black.jpg" alt="Full Screen Background" class="full-screen-bg grayscale parallax">
 
     <div class="absolute inset-0 flex items-center justify-start text-white ">
@@ -147,110 +114,355 @@
       </div>
     </div>
 
-</section>
+  </section>
 
-<!-- About -->
-<div id="about" class="section h-screen flex items-start justify-center bg-[#343434]">
+
+  <!-- About -->
+  <section id="about" class="section snap-start h-full md:h-screen flex items-start justify-center bg-[#343434]">
   <div class="timeline-container relative w-full h-full overflow-hidden">
-    <div class="timeline flex absolute top-1 translate-y-1/2">
-
+    <div class="hidden md:flex timeline absolute translate-y-1/2">
+      <!-- For md - lg screens -->
       <div class="event w-screen h-full bg-[#343434] flex items-start justify-center mr-20">
         <div>
-          <div class="js-show-on-scroll text-center">
-            <div class="flex items-center justify-center">
-              <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 78"><path fill="#FFFCE1" d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"></path></svg>
-              <h2 class="text-base text-white font-avenir tracking-wide">ABOUT ME</h2>
-              <svg class="w-6 h-6 rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 78"><path fill="#FFFCE1" d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"></path></svg>
+          <div class="text-center">
+            <div class="about-parallax w-full js-show-on-scroll">
+              <div class="flex items-center justify-center">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 78"><path fill="#FFFCE1" d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"></path></svg>
+                <h2 class="text-base text-white font-avenir tracking-wide">ABOUT ME</h2>
+                <svg class="w-6 h-6 rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 78"><path fill="#FFFCE1" d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"></path></svg>
+              </div>
+              <p class="mt-1 text-4xl font-stem_bold sm:text-5xl sm:tracking-tight lg:text-6xl text-white ">Kaiser, <span class ="mt-1 text-4xl font-extrabold text-[#F9D304] sm:text-5xl sm:tracking-tight lg:text-6xl ">Who?</span></p>
+              <p class="max-w-3xl mt-4 mx-auto font-stem_regular text-xl text-gray-200">I am <span class="text-[#F9D304] font-avenir">Kaiser Reignheart Metran</span> and</p>
+              <p class="max-w-3xl mx-auto font-stem_regular text-xl text-gray-200">this is my timeline so far...</p>
             </div>
-            <p class="mt-1 text-4xl font-stem_bold sm:text-5xl sm:tracking-tight lg:text-6xl text-white ">Kaiser, <span class ="mt-1 text-4xl font-extrabold text-[#F9D304] sm:text-5xl sm:tracking-tight lg:text-6xl ">Who?</span></p>
-            <p class="max-w-3xl mt-4 mx-auto font-stem_regular text-xl text-gray-200">Here is my timeline so far...</p>
             <div class="pt-16">
-              <ol class="items-center flex w-screen text-start">
-                <li class="relative mb-6 pl-6 ">
+              <ol class="items-start flex w-screen text-start">
+                <li class="relative mb-6 pl-6 fade-up">
                     <div class="flex items-center">
                         <div class="z-10 flex items-center justify-center w-6 h-6 bg-[#f9d404] rounded-full ring-0 ring-[#f9d404]/50 sm:ring-8 shrink-0">
-                            <svg class="w-2.5 h-2.5 text-[#001a4a]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                            </svg>
+                          <svg class="w-4 h-4 text-[#001a4a]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.871c1.355 0 2.697.056 4.024.166C17.155 8.51 18 9.473 18 10.608v2.513M15 8.25v-1.5m-6 1.5v-1.5m12 9.75-1.5.75a3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0L3 16.5m15-3.379a48.474 48.474 0 0 0-6-.371c-2.032 0-4.034.126-6 .371m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.169c0 .621-.504 1.125-1.125 1.125H4.125A1.125 1.125 0 0 1 3 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 0 1 6 13.12M12.265 3.11a.375.375 0 1 1-.53 0L12 2.845l.265.265Zm-3 0a.375.375 0 1 1-.53 0L9 2.845l.265.265Zm6 0a.375.375 0 1 1-.53 0L15 2.845l.265.265Z" />
+                          </svg>
+                          
                         </div>
                         <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                     </div>
                     <div class="mt-3 sm:pe-8">
                         <h3 class="text-lg font-semibold text-[#f9d404]">Hello World!</h3>
                         <p class="block mb-2 text-sm font-normal leading-none text-gray-400">Born on <span class="font-avenir">July 7, 1999 </span></p>
-                        <p class="text-base font-normal text-gray-500 dark:text-gray-400">After several iterations, a final version of Kaiser was shipped to production in the Earth Environment. 🌏</p>
+                        <p class="text-base font-normal text-gray-500">After several iterations, a final version of Kaiser was shipped to production in the Earth Environment.</p>
                     </div>
                 </li>
-                <li class="relative mb-6 pl-6 ">
+                <li class="relative mb-6 pl-6 -translate-x-10 fade-up">
                     <div class="flex items-center">
                         <div class="z-10 flex items-center justify-center w-6 h-6 bg-[#f9d404] rounded-full ring-0 ring-[#f9d404]/50 sm:ring-8 shrink-0">
-                            <svg class="w-2.5 h-2.5 text-[#001a4a]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                            </svg>
+                          <svg class="w-4 h-4 text-[#001a4a]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                          </svg>
+                        </div>
+                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                    </div>
+                    <div class="mt-3 sm:pe-8">
+                        <h3 class="text-lg font-semibold text-[#f9d404]">Kinderjoy</h3>
+                        <p class="block mb-2 text-sm font-normal leading-none text-gray-400 font-avenir">2004-2006</p>
+                        <p class="text-base font-normal text-gray-500">Developed social skills and completed kindergarten with flying colors.</p>
+                    </div>
+                </li>
+                <li class="relative mb-6 pl-6 -translate-x-16 fade-up">
+                    <div class="flex items-center">
+                        <div class="z-10 flex items-center justify-center w-6 h-6 bg-[#f9d404] rounded-full ring-0 ring-[#f9d404]/50 sm:ring-8 shrink-0">
+                          <svg class="w-4 h-4 text-[#001a4a]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                          </svg>
                         </div>
                         <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                     </div>
                     <div class="mt-3 sm:pe-8">
                         <h3 class="text-lg font-semibold text-[#f9d404]">Elementary, My Dear Watson!</h3>
-                        <p class="block mb-2 text-sm font-normal leading-none text-gray-400">Graduated Elementary on <span class="font-avenir">July 7, 1999 </span></p>
-                        <p class="text-base font-normal text-gray-500 dark:text-gray-400">After several iterations, a final version of Kaiser was shipped to production in the Earth Environment. 🌏</p>
+                        <p class="block mb-2 text-sm font-normal leading-none text-gray-400 font-avenir">2006-2012</p>
+                        <p class="text-base font-normal text-gray-500">Finished Elementary Education at Cassidy Elementary School.</p>
                     </div>
                 </li>
-                
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="event w-screen h-full bg-[#343434] flex items-start justify-center mr-20">
+        <div>
+          <div class="text-center">
+            <div class="w-full js-show-on-scroll invisible">
+              <div class="flex items-center justify-center">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 78"><path fill="#FFFCE1" d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"></path></svg>
+                <h2 class="text-base text-white font-avenir tracking-wide">ABOUT ME</h2>
+                <svg class="w-6 h-6 rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 78"><path fill="#FFFCE1" d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"></path></svg>
+              </div>
+              <p class="mt-1 text-4xl font-stem_bold sm:text-5xl sm:tracking-tight lg:text-6xl text-white ">Kaiser, <span class ="mt-1 text-4xl font-extrabold text-[#F9D304] sm:text-5xl sm:tracking-tight lg:text-6xl ">Who?</span></p>
+              <p class="max-w-3xl mt-4 mx-auto font-stem_regular text-xl text-gray-200">I am <span class="text-[#F9D304] font-avenir">Kaiser Reignheart Metran</span> and</p>
+              <p class="max-w-3xl mx-auto font-stem_regular text-xl text-gray-200">this is my timeline so far...</p>
+            </div>
+            <div class="pt-16">
+              <ol class="items-start flex w-screen text-start -translate-x-44">
+                <li class="relative mb-6 pl-6 fade-up">
+                    <div class="flex items-center">
+                        <div class="z-10 flex items-center justify-center w-6 h-6 bg-[#f9d404] rounded-full ring-0 ring-[#f9d404]/50 sm:ring-8 shrink-0">
+                          <svg class="w-4 h-4 text-[#001a4a]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+                          </svg>
+                        </div>
+                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                    </div>
+                    <div class="mt-3 sm:pe-8">
+                        <h3 class="text-lg font-semibold text-[#f9d404]">Mabuhay Ka NSU!</h3>
+                        <p class="block mb-2 text-sm font-normal leading-none text-gray-400 font-avenir">2012-2015</p>
+                        <p class="text-base font-normal text-gray-500">Kicked off my high school journey at Naval State University (now Biliran Province State University). I continued there through 9th grade before transferring to continue my studies elsewhere.
+                        </p>
+                    </div>
+                </li>
+                <li class="relative mb-6 pl-6 -translate-x-10 fade-up">
+                    <div class="flex items-center">
+                        <div class="z-10 flex items-center justify-center w-6 h-6 bg-[#f9d404] rounded-full ring-0 ring-[#f9d404]/50 sm:ring-8 shrink-0">
+                          <svg class="w-4 h-4 text-[#001a4a]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                          </svg>
+                        </div>
+                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                    </div>
+                    <div class="mt-3 sm:pe-8">
+                        <h3 class="text-lg font-semibold text-[#f9d404]">Guardians of Truth</h3>
+                        <p class="block mb-2 text-sm font-normal leading-none text-gray-400 font-avenir">2015-2018</p>
+                        <p class="text-base font-normal text-gray-500">Continued my high school education at East Visayan Adventist Academy, home of the Guardians of Truth. It was the golden era of my high school life.
+                        </p>
+                    </div>
+                </li>
+                <li class="relative mb-6 pl-6 -translate-x-16 fade-up">
+                    <div class="flex items-center">
+                        <div class="z-10 flex items-center justify-center w-6 h-6 bg-[#f9d404] rounded-full ring-0 ring-[#f9d404]/50 sm:ring-8 shrink-0">
+                          <svg class="w-4 h-4 text-[#001a4a]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+                          </svg>
+                        </div>
+                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                    </div>
+                    <div class="mt-3 sm:pe-8">
+                        <h3 class="text-lg font-semibold text-[#f9d404]">A year at EVSU</h3>
+                        <p class="block mb-2 text-sm font-normal leading-none text-gray-400 font-avenir">2018-2019</p>
+                        <p class="text-base font-normal text-gray-500">My introduction to the world of computers began during my first year at Eastern Visayas State University (EVSU). I chose IT because I love creating things and seeing them become valuable to society. During this time, I gained a strong foundation in programming with C and Python.
+
+                        </p>
+                    </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="event w-screen h-full bg-[#343434] flex items-start justify-center mr-20">
+        <div>
+          <div class="text-center">
+            <div class="w-full js-show-on-scroll invisible">
+              <div class="flex items-center justify-center">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 78"><path fill="#FFFCE1" d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"></path></svg>
+                <h2 class="text-base text-white font-avenir tracking-wide">ABOUT ME</h2>
+                <svg class="w-6 h-6 rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 78"><path fill="#FFFCE1" d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"></path></svg>
+              </div>
+              <p class="mt-1 text-4xl font-stem_bold sm:text-5xl sm:tracking-tight lg:text-6xl text-white ">Kaiser, <span class ="mt-1 text-4xl font-extrabold text-[#F9D304] sm:text-5xl sm:tracking-tight lg:text-6xl ">Who?</span></p>
+              <p class="max-w-3xl mt-4 mx-auto font-stem_regular text-xl text-gray-200">I am <span class="text-[#F9D304] font-avenir">Kaiser Reignheart Metran</span> and</p>
+              <p class="max-w-3xl mx-auto font-stem_regular text-xl text-gray-200">this is my timeline so far...</p>
+            </div>
+            <div class="pt-16">
+              <ol class="items-start flex w-screen text-start -translate-x-[23rem]">
+                <li class="relative mb-6 pl-6 fade-up">
+                    <div class="flex items-center">
+                        <div class="z-10 flex items-center justify-center w-6 h-6 bg-[#f9d404] rounded-full ring-0 ring-[#f9d404]/50 sm:ring-8 shrink-0">
+                          <svg class="w-4 h-4 text-[#001a4a]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                          </svg>
+                        </div>
+                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                    </div>
+                    <div class="mt-3 sm:pe-8">
+                        <h3 class="text-lg font-semibold text-[#f9d404]">College at CPAC</h3>
+                        <p class="block mb-2 text-sm font-normal leading-none text-gray-400 font-avenir">2019-2022</p>
+                        <p class="text-base font-normal text-gray-500">I continued my studies at Central Philippine Adventist College, located near the City of Smiles, Bacolod. My college instructors were a true blessing, keeping us uplifted and motivated despite the challenges of the pandemic. I proudly graduated as <span class="font-avenir text-[#f9d404]/60">Cum Laude</span> with a Bachelor of Science in Information Systems. I also gained my <span class="font-avenir text-[#f9d404]/60">CLSSYB</span> and <span class="font-avenir text-[#f9d404]/60">CPMA</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="relative mb-6 pl-6 -translate-x-10 fade-up">
+                    <div class="flex items-center">
+                        <div class="z-10 flex items-center justify-center w-6 h-6 bg-[#f9d404] rounded-full ring-0 ring-[#f9d404]/50 sm:ring-8 shrink-0">
+                          <svg class="w-4 h-4 text-[#001a4a]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+                          </svg>
+                        </div>
+                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                    </div>
+                    <div class="mt-3 sm:pe-8">
+                        <h3 class="text-lg font-semibold text-[#f9d404]">First Tech Job</h3>
+                        <p class="block mb-2 text-sm font-normal leading-none text-gray-400 font-avenir">2022-2024</p>
+                        <p class="text-base font-normal text-gray-500">My first job as a <span class="font-avenir text-[#f9d404]/60">Full Stack Web Developer</span> was at my alma mater, Central Philippine Adventist College. It was here that I gained experience with the <span class="font-avenir text-[#f9d404]/60">TALL Stack</span> and quickly fell in love with <span class="font-avenir text-[#f9d404]/60">Laravel</span>. After two years, I transitioned to freelancing to explore new opportunities.
+                        </p>
+                    </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="md:hidden flex items-center justify-center px-2">
+      <div class="event h-full bg-[#343434] flex items-start justify-center pt-10">
+        <div>
+          <div class="text-center px-6">
+            <div class="w-full js-show-on-scroll">
+              <div class="flex items-center justify-center">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 78"><path fill="#FFFCE1" d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"></path></svg>
+                <h2 class="text-base text-white font-avenir tracking-wide">ABOUT ME</h2>
+                <svg class="w-6 h-6 rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 78"><path fill="#FFFCE1" d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"></path></svg>
+              </div>
+              <p class="mt-1 text-4xl font-stem_bold sm:text-5xl sm:tracking-tight lg:text-6xl text-white ">Kaiser, <span class ="mt-1 text-4xl font-extrabold text-[#F9D304] sm:text-5xl sm:tracking-tight lg:text-6xl ">Who?</span></p>
+              <p class="max-w-3xl mt-4 mx-auto font-stem_regular text-xl text-gray-200">I am <span class="text-[#F9D304] font-avenir">Kaiser Reignheart Metran</span> and</p>
+              <p class="max-w-3xl mx-auto font-stem_regular text-xl text-gray-200">this is my timeline so far...</p>
+            </div>
+            <div class="pt-16">
+              <ol class="relative border-s border-gray-200 dark:border-gray-700 text-left">                  
+                <li class="mb-10 ms-6">            
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-[#F9D304] rounded-full fade-up-mobile -start-3 ring-8 ring-[#F9D304]/50">
+                      <svg class="w-4 h-4 text-[#001a4a]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.871c1.355 0 2.697.056 4.024.166C17.155 8.51 18 9.473 18 10.608v2.513M15 8.25v-1.5m-6 1.5v-1.5m12 9.75-1.5.75a3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0L3 16.5m15-3.379a48.474 48.474 0 0 0-6-.371c-2.032 0-4.034.126-6 .371m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.169c0 .621-.504 1.125-1.125 1.125H4.125A1.125 1.125 0 0 1 3 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 0 1 6 13.12M12.265 3.11a.375.375 0 1 1-.53 0L12 2.845l.265.265Zm-3 0a.375.375 0 1 1-.53 0L9 2.845l.265.265Zm6 0a.375.375 0 1 1-.53 0L15 2.845l.265.265Z" />
+                    </svg>
+                    </span>
+                    <div class="pl-4 fade-up-mobile">
+                      <h3 class="text-lg font-semibold text-[#f9d404]">Hello World!</h3>
+                      <p class="block mb-2 text-sm font-normal leading-none text-gray-400">Born on <span class="font-avenir">July 7, 1999 </span></p>
+                      <p class="text-base font-normal text-gray-500">After several iterations, a final version of Kaiser was shipped to production in the Earth Environment.</p>
+                    </div>
+                </li>
+                <li class="mb-10 ms-6">            
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-[#F9D304] rounded-full fade-up-mobile -start-3 ring-8 ring-[#F9D304]/50">
+                      <svg class="w-4 h-4 text-[#001a4a]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                      </svg>
+                    </span>
+                    <div class="pl-4 fade-up-mobile">
+                      <h3 class="text-lg font-semibold text-[#f9d404]">Kinderjoy</h3>
+                        <p class="block mb-2 text-sm font-normal leading-none text-gray-400 font-avenir">2004-2006</p>
+                        <p class="text-base font-normal text-gray-500">Developed social skills and completed kindergarten with flying colors.</p>
+                    </div>
+                </li>
+                <li class="mb-10 ms-6">            
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-[#F9D304] rounded-full fade-up-mobile -start-3 ring-8 ring-[#F9D304]/50">
+                      <svg class="w-4 h-4 text-[#001a4a]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                      </svg>
+                    </span>
+                    <div class="pl-4 fade-up-mobile">
+                      <h3 class="text-lg font-semibold text-[#f9d404]">Elementary, My Dear Watson!</h3>
+                        <p class="block mb-2 text-sm font-normal leading-none text-gray-400 font-avenir">2006-2012</p>
+                        <p class="text-base font-normal text-gray-500">Finished Elementary Education at Cassidy Elementary School.</p>
+                    </div>
+                </li>
+                <li class="mb-10 ms-6">            
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-[#F9D304] rounded-full fade-up-mobile -start-3 ring-8 ring-[#F9D304]/50">
+                      <svg class="w-4 h-4 text-[#001a4a]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+                    </svg>
+                    </span>
+                    <div class="pl-4 fade-up-mobile">
+                      <h3 class="text-lg font-semibold text-[#f9d404]">Mabuhay Ka NSU!</h3>
+                        <p class="block mb-2 text-sm font-normal leading-none text-gray-400 font-avenir">2012-2015</p>
+                        <p class="text-base font-normal text-gray-500">Kicked off my high school journey at Naval State University (now Biliran Province State University). I continued there through 9th grade before transferring to continue my studies elsewhere.
+                        </p>
+                    </div>
+                </li>
+                <li class="mb-10 ms-6">            
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-[#F9D304] rounded-full fade-up-mobile -start-3 ring-8 ring-[#F9D304]/50">
+                      <svg class="w-4 h-4 text-[#001a4a]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                      </svg>
+                    </span>
+                    <div class="pl-4 fade-up-mobile">
+                      <h3 class="text-lg font-semibold text-[#f9d404]">Guardians of Truth</h3>
+                        <p class="block mb-2 text-sm font-normal leading-none text-gray-400 font-avenir">2015-2018</p>
+                        <p class="text-base font-normal text-gray-500">Continued my high school education at East Visayan Adventist Academy, home of the Guardians of Truth. It was the golden era of my high school life.
+                        </p>
+                    </div>
+                </li>
+                <li class="mb-10 ms-6">            
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-[#F9D304] rounded-full fade-up-mobile -start-3 ring-8 ring-[#F9D304]/50">
+                      <svg class="w-4 h-4 text-[#001a4a]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+                    </svg>
+                    </span>
+                    <div class="pl-4 fade-up-mobile">
+                      <h3 class="text-lg font-semibold text-[#f9d404]">A year at EVSU</h3>
+                        <p class="block mb-2 text-sm font-normal leading-none text-gray-400 font-avenir">2018-2019</p>
+                        <p class="text-base font-normal text-gray-500">My introduction to the world of computers began during my first year at Eastern Visayas State University (EVSU). I chose IT because I love creating things and seeing them become valuable to society. During this time, I gained a strong foundation in programming with C and Python.
+
+                        </p>
+                    </div>
+                </li>
+                <li class="mb-10 ms-6">            
+                  <span class="absolute flex items-center justify-center w-6 h-6 bg-[#F9D304] rounded-full fade-up-mobile -start-3 ring-8 ring-[#F9D304]/50">
+                    <svg class="w-4 h-4 text-[#001a4a]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                    </svg>
+                  </span>
+                  <div class="pl-4 fade-up-mobile">
+                    <h3 class="text-lg font-semibold text-[#f9d404]">College at CPAC</h3>
+                        <p class="block mb-2 text-sm font-normal leading-none text-gray-400 font-avenir">2019-2022</p>
+                        <p class="text-base font-normal text-gray-500">I continued my studies at Central Philippine Adventist College, located near the City of Smiles, Bacolod. My college instructors were a true blessing, keeping us uplifted and motivated despite the challenges of the pandemic. I proudly graduated as <span class="font-avenir text-[#f9d404]/60">Cum Laude</span> with a Bachelor of Science in Information Systems. I also gained my <span class="font-avenir text-[#f9d404]/60">CLSSYB</span> and <span class="font-avenir text-[#f9d404]/60">CPMA</span>
+                        </p>
+                  </div>
+                </li>
+                <li class="mb-10 ms-6">            
+                  <span class="absolute flex items-center justify-center w-6 h-6 bg-[#F9D304] rounded-full fade-up-mobile -start-3 ring-8 ring-[#F9D304]/50">
+                    <svg class="w-4 h-4 text-[#001a4a]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+                  </svg>
+                  </span>
+                  <div class="pl-4 fade-up-mobile">
+                    <h3 class="text-lg font-semibold text-[#f9d404]">First Tech Job</h3>
+                        <p class="block mb-2 text-sm font-normal leading-none text-gray-400 font-avenir">2022-2024</p>
+                        <p class="text-base font-normal text-gray-500">My first job as a <span class="font-avenir text-[#f9d404]/60">Full Stack Web Developer</span> was at my alma mater, Central Philippine Adventist College. It was here that I gained experience with the <span class="font-avenir text-[#f9d404]/60">TALL Stack</span> and quickly fell in love with <span class="font-avenir text-[#f9d404]/60">Laravel</span>. After two years, I transitioned to freelancing to explore new opportunities.
+                        </p>
+                  </div>
+                </li>
               </ol>
             </div>
           </div>
         </div>
       </div>
       
-      <div class="event w-screen h-full bg-lime-500 flex items-center justify-center mr-20">Event 2</div>
-      <div class="event w-screen h-full bg-lime-500 flex items-center justify-center mr-20">Event 3</div>
-      <div class="event w-screen h-full bg-lime-500 flex items-center justify-center mr-20">Event 4</div>
+
     </div>
   </div>
-</div>
-<!-- <section id="about" class="relative overflow-hidden w-full h-screen bg-[#343434] text-white">
-    <div class="px-20">
-      <div class="flex items-start justify-center w-full h-full pt-10 px-20 parallax">
-        <div>
-          <div class="js-show-on-scroll text-center">
-            <div class="flex items-center justify-center">
-              <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 78"><path fill="#FFFCE1" d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"></path></svg>
-              <h2 class="text-base text-white font-avenir tracking-wide">ABOUT ME</h2>
-              <svg class="w-6 h-6 rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 78"><path fill="#FFFCE1" d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"></path></svg>
-            </div>
-            <p class="mt-1 text-4xl font-stem_bold sm:text-5xl sm:tracking-tight lg:text-6xl text-white ">Who <span class ="mt-1 text-4xl font-extrabold text-[#F9D304] sm:text-5xl sm:tracking-tight lg:text-6xl ">am I?</span></p>
-            <p class="max-w-3xl mt-4 mx-auto font-stem_regular text-xl text-gray-200">Here is my timeline so far.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="mt-10 w-full h-full rounded-lg border">
-      <div class="flex items-center justify-center">
-        <div class="timeline-container relative">
-          <div class="timeline">
-            <div class="event">Event 1</div>
-            <div class="event">Event 2</div>
-            <div class="event">Event 3</div>
-            <div class="event">Event 4</div>
-          </div>
-        </div>
-    </div>
-</section> -->
+  </section>
 
-<footer class="py-4 bg-[#F9D304] text-black text-center font-stem_regular">
-    <p>&copy; 2024 Kaiser Metran. All rights reserved.</p>
-    <div class="mt-2">
-      <a href="#" class="mx-2 text-black font-stem_regular hover:text-gray-400">LinkedIn</a>
-      <a href="#" class="mx-2 text-black font-stem_regular hover:text-gray-400">GitHub</a>
-      <a href="#" class="mx-2 text-black font-stem_regular hover:text-gray-400">Twitter</a>
+  <!-- Portfolio -->
+  <section id="portfolio" class="relative snap-start overflow-hidden w-full h-full">
+    <div class="h-screen">
+
     </div>
+
+  </section>
+
+  <footer class="py-4 bg-[#F9D304] text-black text-center font-stem_regular">
+      <p>&copy; 2024 Kaiser Metran. All rights reserved.</p>
+      <div class="mt-2">
+        <a href="#" class="mx-2 text-black font-stem_regular hover:text-gray-400">LinkedIn</a>
+        <a href="#" class="mx-2 text-black font-stem_regular hover:text-gray-400">GitHub</a>
+        <a href="#" class="mx-2 text-black font-stem_regular hover:text-gray-400">Twitter</a>
+      </div>
   </footer>
 
 
 
-<script src="src/flowbite/dist/flowbite.min.js"></script>
-<script src="src/js/app.js"></script>
+  <script src="src/flowbite/dist/flowbite.min.js"></script>
+  <script src="src/js/app.js"></script>
 
 </body>
 </html>

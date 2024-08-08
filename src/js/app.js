@@ -131,35 +131,94 @@ const sections = document.querySelectorAll("section");
     }
   });
 
+  gsap.to(".about-parallax.w-full", {
+    xPercent: 70,
+    ease: "power1.out",
+    scrollTrigger: {
+      trigger: "#about",
+      start: "top top",
+      end: "bottom top",
+      scrub: true
+    }
+  });
+
   const timeline = document.querySelector(".timeline");
-const events = document.querySelectorAll(".event");
+  const events = document.querySelectorAll(".event");
 
-// Calculate the width of the entire timeline
-const timelineWidth = timeline.scrollWidth;
-const timelineContainerWidth = timeline.parentElement.clientWidth;
+  // Calculate the width of the entire timeline
+  const timelineWidth = timeline.scrollWidth;
+  const timelineContainerWidth = timeline.parentElement.clientWidth;
 
-// Create the horizontal scroll animation
-gsap.to(timeline, {
-  x: -(timelineWidth - timelineContainerWidth),
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".section",
-    start: "top top",
-    end: () => "+=" + (timelineWidth - timelineContainerWidth),
-    scrub: true,
-    pin: true,
-    anticipatePin: 1,
-    // onLeave: () => {
-    //   gsap.to(".section", {
-    //     autoAlpha: 0,
-    //     duration: 0.5,
-    //     onComplete: () => {
-    //       gsap.to(".section", { autoAlpha: 1 });
-    //     }
-    //   });
-    // }
-  }
-});
+  // Create the horizontal scroll animation
+  gsap.to(timeline, {
+    x: -(timelineWidth - timelineContainerWidth),
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".section",
+      start: "top top",
+      end: () => "+=" + (timelineWidth - timelineContainerWidth),
+      scrub: true,
+      pin: true,
+      anticipatePin: 1,
+      // onLeave: () => {
+      //   gsap.to(".section", {
+      //     autoAlpha: 0,
+      //     duration: 0.5,
+      //     onComplete: () => {
+      //       gsap.to(".section", { autoAlpha: 1 });
+      //     }
+      //   });
+      // }
+    }
+  });
+
+  const timeliner = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#about',
+      start: 'top center', // Trigger animation when the top of the container hits the bottom of the viewport
+      end: 'bottom bottom', // Animation ends when the bottom of the container hits the top of the viewport
+      once: true, // Makes the animation smooth with the scroll
+    },
+    defaults: {
+      duration: 1,
+      ease: "power2.out"
+    }
+  });
+
+  // Select all the list items
+  const items = document.querySelectorAll('.fade-up');
+
+  // Animate the items with a stagger
+  timeliner.from(items, {
+    opacity: 0,
+    x: 50,
+    stagger: 0.3,
+    delay: 0.5
+  });
+
+  const timelines = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#about',
+      start: 'top bottom', // Trigger animation when the top of the container hits the bottom of the viewport
+      end: 'bottom center', // Animation ends when the bottom of the container hits the top of the viewport
+      scrub: true, // Makes the animation smooth with the scroll
+    },
+    defaults: {
+      duration: 1,
+      ease: "power2.out"
+    }
+  });
+
+  // Select all the list items
+  const items2 = document.querySelectorAll('.fade-up-mobile');
+
+  // Animate the items with a stagger
+  timelines.from(items2, {
+    opacity: 0,
+    y: 50,
+    stagger: 0.3,
+    delay: 0.5
+  });
 
   
 
