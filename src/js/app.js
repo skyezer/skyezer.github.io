@@ -70,27 +70,20 @@ const KM_div = document.getElementById('KM_div');
     });
 
     ScrollTrigger.create({
-        start: "top top",
-        end: "bottom top",
-        onToggle: self => {
-            const navbar = document.querySelector('nav');
-            if (self.isActive) {
-            navbar.classList.add('md:h-20');
-            navbar.classList.add('backdrop-blur-sm');
-            navbar.classList.add('bg-black');
-            navbar.classList.add('bg-opacity-50');
-            navbar.classList.add('rounded-b-lg');
-            }
-            else{
-            navbar.classList.remove('md:h-20');
-            navbar.classList.remove('backdrop-blur-sm');
-            navbar.classList.remove('bg-black');
-            navbar.classList.remove('bg-opacity-50');
-            navbar.classList.remove('rounded-b-lg');
-            }
-
-        }
+      trigger: "#scroll",
+      start: "top top",
+      end: "bottom bottom",
+      scrub: true,
+      onEnter: () => {
+        const navbar = document.querySelector('nav');
+        navbar.classList.add('md:h-20', 'backdrop-blur-sm', 'bg-black', 'bg-opacity-50', 'rounded-b-lg');
+      },
+      onLeaveBack: () => {
+        const navbar = document.querySelector('nav');
+        navbar.classList.remove('md:h-20', 'backdrop-blur-sm', 'bg-black', 'bg-opacity-50', 'rounded-b-lg');
+      },
     });
+    
 
 const sections = document.querySelectorAll("section");
 
