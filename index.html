@@ -92,7 +92,7 @@
                         <a href="#portfolio" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300" onclick="hideMobileButton()">Portfolio</a>
                     </li>
                     <li>
-                        <a href="#testimonials" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300" onclick="hideMobileButton()">Testimonials</a>
+                        <a href="#contact" class="nav-link block font-stem_regular py-2 pr-4 pl-3 text-[#001a4a] md:text-white lg:hover:bg-transparent lg:border-0 md:hover:text-[#F9D304] lg:p-0 transition ease-in-out delay-150 duration-300" onclick="hideMobileButton()">Contact Me</a>
                     </li>
                 </ul>
             </div>
@@ -313,6 +313,7 @@
         </div>
   
       </div>
+      <!-- For mobile -->
       <div class="md:hidden flex items-center justify-center px-2">
         <div class="event h-full bg-[#343434] flex items-start justify-center pt-10">
           <div>
@@ -443,9 +444,94 @@
     </section>
   
     <!-- Portfolio -->
-    <section id="portfolio" class="relative snap-start overflow-hidden w-full h-full">
-      <div class="h-screen">
-  
+    <section id="portfolio" class="relative snap-start overflow-hidden w-full h-full bg-[#f2f0ef]">
+      <div class="h-full pb-10">
+        <div class="text-center py-20">
+          <div class="w-full js-show-on-scroll">
+            <div class="flex items-center justify-center">
+              <svg class="w-6 h-6 text-[#343434]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 78"><path fill="currentColor" d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"></path></svg>
+              <h2 class="text-base text-[#343434] font-avenir tracking-wide">PORTFOLIO</h2>
+              <svg class="w-6 h-6 rotate-180 text-[#343434]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 78"><path fill="currentColor" d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"></path></svg>
+            </div>
+            <p class="mt-1 text-4xl font-stem_bold sm:text-5xl sm:tracking-tight lg:text-6xl text-[#343434] ">Made by Kaiser</p>
+            <p class="max-w-3xl mt-4 mx-auto font-stem_regular text-xl text-gray-600">From Concept to Creation✨</p>
+          </div>
+        </div>
+        <div class="px-8 lg:px-20 py-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-y-10">
+            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:scale-105 transition-all ease-in-out duration-150">
+              
+              <a href="./pages/rfid-module.html">
+                  <img class="rounded-t-lg" src="./src/portfolio-imgs/rfid-module.png" onmouseover="this.src='./src/portfolio-gif/rfid-module.gif';" onmouseout="this.src='./src/portfolio-imgs/rfid-module.png';" alt="" />
+              </a>
+              <div class="p-5">
+                  <a href="./pages/rfid-module.html">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">RFID Scanner Module</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">A project leveraging RFID technology for efficient attendance tracking and gate traffic monitoring.</p>
+                  <a href="./pages/rfid-module.html" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                       <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                      </svg>
+                  </a>
+              </div>
+            </div>
+            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:scale-105 transition-all ease-in-out duration-150">
+              <a href="#">
+                  <img class="rounded-t-lg" src="./src/portfolio-imgs/rfid-module.png" alt="" />
+              </a>
+              <div class="p-5">
+                  <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                       <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                      </svg>
+                  </a>
+              </div>
+            </div>
+            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:scale-105 transition-all ease-in-out duration-150">
+              <a href="#">
+                  <img class="rounded-t-lg" src="./src/portfolio-imgs/rfid-module.png" alt="" />
+              </a>
+              <div class="p-5">
+                  <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                       <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                      </svg>
+                  </a>
+              </div>
+            </div>
+            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:scale-105 transition-all ease-in-out duration-150">
+              <a href="#">
+                  <img class="rounded-t-lg" src="./src/portfolio-imgs/rfid-module.png" alt="" />
+              </a>
+              <div class="p-5">
+                  <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                       <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                      </svg>
+                  </a>
+              </div>
+            </div>
+            
+            
+          </div>
+        </div>
       </div>
   
     </section>

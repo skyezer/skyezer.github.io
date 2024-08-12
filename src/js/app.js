@@ -1,4 +1,4 @@
-const KM_div = document.getElementById('KM_div');
+    const KM_div = document.getElementById('KM_div');
     const K_div = document.getElementById('K_div');
     const M_div = document.getElementById('M_div');
 
@@ -213,12 +213,27 @@ const sections = document.querySelectorAll("section");
     delay: 0.5
   });
 
-  
 
   const mobileButton = document.getElementById('mobileButton')
 
   function hideMobileButton(){
     mobileButton.click();
   }
+
+function test($data){
+
+  const img_tag = document.getElementById($data);
+  
+  switch($data) {
+    case 'img-1':
+      console.log(img_tag);
+      break;
+    case y:
+      // code block
+      break;
+    default:
+      // code block
+  }
+}
 
     
